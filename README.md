@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![](Diagram/Elk-Diagram.png)
+![Diagram](Diagram/Elk-Diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -83,7 +83,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![Docker](Images/Docker.png)
+![Docker](Images/Docker.PNG)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -116,17 +116,20 @@ Notable information
 
 Commands
 - Download playbook:
- `cd /etc/ansible`
- `ansible-playbook Metricbeat-Playbook.yml`
- `ansible-playbook Filebeat-playbook.yml`
+ cd /etc/ansible
+ ansible-playbook Metricbeat-Playbook.yml
+ ansible-playbook Filebeat-playbook.yml
 
 - Edit host file:
- `cd /etc/ansible` 
- `nano hosts` 
- `[webservers]`
- `10.0.0.8`
- `10.0.0.9`
- `10.0.0.10`
+``````
+root@9bf2ebe127ae:/etc/ansible# cd /etc/ansible
+root@9bf2ebe127ae:/etc/ansible# nano hosts
+ 
+ [webservers]
+ 10.0.0.8
+ 10.0.0.9
+ 10.0.0.10
 
- `[elk]`
- `10.1.0.4`
+ [elk]
+ 10.1.0.4
+```````
