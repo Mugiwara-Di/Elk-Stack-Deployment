@@ -121,6 +121,9 @@ Commands
  `ansible-playbook Filebeat-playbook.yml`
 
 - Edit host file:
+-````````bash
+- sysadmin@Jump-Box-Provisioner:~$ cd /etc
+`````````
  `cd /etc/ansible` 
  `nano hosts` 
  `[webservers]`
