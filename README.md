@@ -122,10 +122,8 @@ Commands
 
 - Edit host file:
 ``````
-bash
-
- cd /etc/ansible
- nano hosts
+root@9bf2ebe127ae:/etc/ansible# cd /etc/ansible
+root@9bf2ebe127ae:/etc/ansible# nano hosts
  
  [webservers]
  10.0.0.8
