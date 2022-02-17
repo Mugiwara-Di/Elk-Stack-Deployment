@@ -121,9 +121,9 @@ Commands
  `ansible-playbook Filebeat-playbook.yml`
 
 - Edit host file:
-`
+``````
 bash
-
+``````
  cd /etc/ansible
  nano hosts
  
