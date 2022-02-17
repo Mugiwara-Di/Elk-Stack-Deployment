@@ -87,25 +87,34 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+
+| Name  | IP Address |
+|-------|------------|
+| Web-1 | 10.0.0.8   |
+| Web-2 | 10.0.0.9   |
+| Web-3 | 10.0.0.10  |
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Microbeats
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat monitors the log files or locations specified, collects log events, and forwards them for indexing.
+- Metricbeat collects metric data from your target servers, this could be operating system metrics such as CPU or memory or data related to services running on the server.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the playbook file to Ansible control node.
+- Update the host file to include the machine(s) to install the Elk server on.
+- Run the playbook, and navigate to Kibana (http://[your.VM.IP]:5601/app/kibana) to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+Notable information
+- The playbook can be found in the /etc/ansible directory
+- You will nede to update the host file in this directory to make Ansible run the playbook on a specific machine. Withn the host file you will be able to add or remove machines from the specifed group. If the host file has the correct specifed machine, they playbook will automaticily run and install what needs to be installed on the specifed IP.
+- Navigate to ((http://[your.VM.IP]:5601/app/kibana) to make sure the Elk server is running.
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+Commands
+- Download playbook: 'cd /etc/ansible' 'ansible-playbook Metricbeat-Playbook.yml' 'ansible-playbook Filebeat-playbook.yml'
+
+- Edit host file: 'cd /etc/ansible' 'nano hosts' [webservers] [elk]
