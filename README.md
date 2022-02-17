@@ -116,12 +116,13 @@ Notable information
 
 Commands
 - Download playbook:
- cd /etc/ansible
- ansible-playbook Metricbeat-Playbook.yml
- ansible-playbook Filebeat-playbook.yml
-
+```````
+ root@9bf2ebe127ae:~# cd /etc/ansible
+ root@9bf2ebe127ae:/etc/ansible# ansible-playbook Metricbeat-Playbook.yml
+ root@9bf2ebe127ae:/etc/ansible# ansible-playbook Filebeat-playbook.yml
+```````
 - Edit host file:
-``````
+```````
 root@9bf2ebe127ae:/etc/ansible# cd /etc/ansible
 root@9bf2ebe127ae:/etc/ansible# nano hosts
  
