@@ -122,7 +122,7 @@ Commands
 
 - Edit host file:
 -````````bash
-- sysadmin@Jump-Box-Provisioner:~$ cd /etc
+azadmin@Jump-Box-Provisioner:~$
 `````````
  `cd /etc/ansible` 
  `nano hosts` 
