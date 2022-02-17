@@ -112,9 +112,21 @@ SSH into the control node and follow the steps below:
 Notable information
 - The playbook can be found in the /etc/ansible directory
 - You will nede to update the host file in this directory to make Ansible run the playbook on a specific machine. Withn the host file you will be able to add or remove machines from the specifed group. If the host file has the correct specifed machine, they playbook will automaticily run and install what needs to be installed on the specifed IP.
-- Navigate to ((http://[your.VM.IP]:5601/app/kibana) to make sure the Elk server is running.
+- Navigate to (http://[your.VM.IP]:5601/app/kibana) to make sure the Elk server is running.
 
 Commands
-- Download playbook: 'cd /etc/ansible' 'ansible-playbook Metricbeat-Playbook.yml' 'ansible-playbook Filebeat-playbook.yml'
+- Download playbook:
+ `cd /etc/ansible`
+ `ansible-playbook Metricbeat-Playbook.yml`
+ `ansible-playbook Filebeat-playbook.yml`
 
-- Edit host file: 'cd /etc/ansible' 'nano hosts' [webservers] [elk]
+- Edit host file:
+ `cd /etc/ansible` 
+ `nano hosts` 
+ `[webservers]`
+ `10.0.0.8`
+ `10.0.0.9`
+ `10.0.0.10`
+
+ `[elk]`
+ `10.1.0.4`
