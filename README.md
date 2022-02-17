@@ -116,9 +116,9 @@ Notable information
 
 Commands
 - Download playbook:
- `cd /etc/ansible`
- `ansible-playbook Metricbeat-Playbook.yml`
- `ansible-playbook Filebeat-playbook.yml`
+ cd /etc/ansible
+ ansible-playbook Metricbeat-Playbook.yml
+ ansible-playbook Filebeat-playbook.yml
 
 - Edit host file:
 ``````
