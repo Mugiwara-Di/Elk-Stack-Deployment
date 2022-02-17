@@ -123,7 +123,7 @@ Commands
 - Edit host file:
 ``````
 bash
-``````
+
  cd /etc/ansible
  nano hosts
  
@@ -134,3 +134,4 @@ bash
 
  [elk]
  10.1.0.4
+```````
